@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Media Player</title>
+  <style>
+    .media-section {
+      margin-bottom: 20px;
+    }
+    .media-section h2 {
+      margin-bottom: 5px;
+    }
+    .media-section audio,
+    .media-section video {
+      margin-top: 5px;
+    }
+    .video-frame {
+      max-width: 600px; /* Adjust the maximum width as desired */
+      display: block;
+      margin: 0 auto; /* Centers the video horizontally */
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose Your Media</h1>
+  <button onclick="playVideo()">SAVE AS</button>
+  <button onclick="playVideo2()">Citizenfour</button>
+  <button onclick="playVideo3()">Neon Thrills</button>
+  <button onclick="playVideo4()">Wikileaks video</button>
+  
+
+  <div id="video1-container" class="media-section"></div>
+  <div id="video2-container" class="media-section"></div>
+  <div id="video3-container" class="media-section"></div>
+  <div id="video4-container" class="media-section"></div>
+
+  
+  <script>
+    function playVideo() {
+      var video1Container = document.getElementById("video1-container");
+      video1Container.innerHTML = '<h2>Pahc - SAVE AS</h2><video class="video-frame" controls><source src="save_as.mp4" type="video/mp4"></video><a href="934797_triplebarrel---The-Noise-E.mp3" download>Download Song</a>';
+
+      // Clear other media players
+      var video2Container = document.getElementById("video2-container");
+      video2Container.innerHTML = '';
+      var video3Container = document.getElementById("video3-container");
+      video3Container.innerHTML = '';
+      var video4Container = document.getElementById("video4-container");
+      video4Container.innerHTML = '';
+    }
+
+    function playVideo2() {
+      var video2Container = document.getElementById("video2-container");
+      video2Container.innerHTML = '<h2>Citizenfour (2014)</h2><video class="video-frame" controls><source src="https://archive.org/download/Citizen.Four2014/citizen.four%282014%29.mp4" type="video/mp4"></video>';
+
+      // Clear other media players
+      var video1Container = document.getElementById("video1-container");
+      video1Container.innerHTML = '';
+      var video3Container = document.getElementById("video3-container");
+      video3Container.innerHTML = '';
+      var video4Container = document.getElementById("video4-container");
+      video4Container.innerHTML = '';
+    }
+
+    function playVideo3() {
+      var video3Container = document.getElementById("video3-container");
+      video3Container.innerHTML = '<h2>LukNash - Neon Thrills</h2><video class="video-frame" controls><source src="neon_thrills.mp4" type="video/mp4"></video><a href="neon_thrills.mp3" download>This function is temporarely unavailable</a>';
+
+      // Clear other media players
+      var video1Container = document.getElementById("video1-container");
+      video1Container.innerHTML = '';
+      var video2Container = document.getElementById("video2-container");
+      video2Container.innerHTML = '';
+      var video4Container = document.getElementById("video4-container");
+      video4Container.innerHTML = '';
+    }
+
+    function playVideo4() {
+      var video4Container = document.getElementById("video4-container");
+      video4Container.innerHTML = '<h2>Wikileaks - New Baghdad video</h2><video class="video-frame" controls><source src="https://file.wikileaks.org/file/collateralmurder/crazyhorse-15-wrapped-in.webm" type="video/webm"></video><a href="https://file.wikileaks.org/file/collateralmurder/crazyhorse-15-wrapped-in.webm" download>This one too</a>';
+
+      // Clear other media players
+      var video1Container = document.getElementById("video1-container");
+      video1Container.innerHTML = '';
+      var video2Container = document.getElementById("video2-container");
+      video2Container.innerHTML = '';
+      var video3Container = document.getElementById("video3-container");
+      video3Container.innerHTML = '';
+    }
+  </script>
+</body>
+</html>
